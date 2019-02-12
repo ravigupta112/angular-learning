@@ -1,4 +1,4 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add</button>
-<p [innerText]="allowNewServer"></p>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="createServer()">Add</button>
+<p [innerText]="serverText"></p>
 <app-server></app-server>
 <app-server></app-server>

@@ -4,7 +4,11 @@
 
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="createServer()">Add</button>
-<p [innerText]="serverText"></p>
-<p *ngIf="serverCreated"> Server was created by vishnu</p>
+<!-- <p [innerText]="serverText"></p> -->
+<p *ngIf="serverCreated; else noServer"> Server was created by vishnu</p>
+<ng-template #noServer>
+    <p>No server created by Vishnu</p>
+
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
